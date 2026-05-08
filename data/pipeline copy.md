@@ -1,0 +1,63 @@
+# Pipeline de Ofertas
+
+## Pendientes
+
+- [ ] https://www.getonbrd.com/jobs/programming/developer-backend-node-senior-latalm-bc-tecnologia-remote | BC Tecnología | Developer Back-end Node.js Senior (Latam)
+- [ ] https://www.getonbrd.com/jobs/programacion/backend-engineer-java-21-y-node-js-coderslab-io-remote | Coderslab.io | Back-end Engineer Java 21 y Node.js
+- [ ] https://www.getonbrd.com/jobs/programming/backend-developer-node-js-aws-bc-tecnologia-remote | BC Tecnología | Back-end Developer (Node.js / AWS)
+- [ ] https://www.getonbrd.com/jobs/programacion/backend-developer-node-js-nest-js-express-tcit-remote | TCIT | Back-end Developer (Node.js, Nest.JS, Express)
+- [ ] https://www.getonbrd.com/empleos/programacion/desarrollador-a-full-stack-angular-node-js-semi-senior-bc-tecnologia-remote | BC Tecnología | Desarrollador/a Full-Stack Angular – Node.js (Latam)
+- [ ] https://www.getonbrd.com/empleos/programacion/desarrollador-backend-node-js-coderslab-io-remote | Coderslab.io | Desarrollador Back-end (Node.js)
+- [ ] https://www.getonbrd.com/empleos/programacion/backend-developer-nodejs-interfell-remote-31fb | Interfell | Back-end Developer (Node.js)
+- [ ] https://www.getonbrd.com/empleos/programacion/senior-node-js-backend-developer-seek-remote | SEEK | Senior Node.js Back-end Developer
+- [ ] https://www.getonbrd.com/jobs/programming/sr-backend-engineer-node-tecla-remote | TECLA | Sr. Back-end Engineer (Node.js)
+- [ ] https://www.getonbrd.com/empleos/programacion/senior-developer-bloomfam-remote | BloomFam | Senior Developer
+- [ ] https://job-boards.greenhouse.io/engine/jobs/6482893003 | Engine | Senior Software Engineer, Backend (LATAM)
+- [ ] https://job-boards.greenhouse.io/kasaliving/jobs/7511025003 | Kasa | Senior Software Engineer (LATAM)
+- [ ] https://job-boards.greenhouse.io/simpplr/jobs/5593849004 | Simpplr | Software Engineer - Backend (Node.Js)
+- [ ] https://job-boards.greenhouse.io/teravision/jobs/7481782003 | Teravision Technologies | Backend Developer
+- [ ] https://job-boards.greenhouse.io/remotecom/jobs/7660515003 | Remote | Senior Backend Developer
+- [ ] https://job-boards.greenhouse.io/opensesame/jobs/7332404 | OpenSesame | Senior Software Engineer (Latin America)
+- [ ] https://jobs.ashbyhq.com/hopper/958719d1-a02c-4ad6-8c0a-83b87d93e8fc | Hopper | Sr Backend Engineer, LATAM - Core (100% Remote)
+- [ ] https://jobs.ashbyhq.com/moovx/27e3be30-a416-4fdb-a455-ae612eecb7ee | Moovx | Backend Software Engineer
+- [ ] https://jobs.ashbyhq.com/hopper/416ef471-f7d2-4796-9f0c-ecb75349bb67 | Hopper | Sr Backend Engineer, LATAM - API (100% Remote)
+- [ ] https://jobs.ashbyhq.com/deel/5d786614-7454-43c0-b6e2-68ba0c0bbf10 | Deel | Backend Engineer (Node.js)
+- [ ] https://jobs.ashbyhq.com/g2i/101b82f1-3db9-4ef6-adb2-ff80a3746613 | G2i | Backend Engineer (Nodejs + Kubernetes) - LatAm
+- [ ] https://jobs.ashbyhq.com/reacher/c37fff15-4ae7-454b-9125-e68bf099446f | Reacher | Full Stack Software Engineer - Remote (Latam)
+- [ ] https://jobs.ashbyhq.com/deel/960d63b1-073b-4d69-bdc8-c88fd2900bb0 | Deel | Senior Backend Engineer, Node.js + AWS
+- [ ] https://jobs.ashbyhq.com/deel/0ce793cc-6a6b-415d-9c1e-97f9dea7b08b | Deel | Backend Engineer (Node.js/TypeScript)
+- [ ] https://jobs.lever.co/jobgether/e1892ea4-aca1-451b-afc9-caece023d5ef | Jobgether | Senior Full Stack Developer (React/Node) - Remote LATAM
+- [ ] https://jobs.lever.co/powdevs/6318109b-7aa3-486b-bb1b-eb26b345aa73 | Powdevs | Senior Backend Node.js Engineer (LATAM)
+- [ ] https://jobs.lever.co/fullstacklabs/018d9ad8-9d9f-4ed5-9b02-dea18dcb491f | FullStack Labs | Node.JS/PostgreSQL Developer - Remote - Colombia
+- [ ] https://jobs.lever.co/tryjeeves/6cfaf109-e538-45cd-bd0f-ed0bc360fc7f | Jeeves | Principal Backend Engineer
+- [ ] https://jobs.lever.co/remedyproductstudio/be536a18-d647-4b05-b58f-c9f44cb924cf | Remedy Product Studio | Backend Engineer (Node.js)
+- [ ] https://jobs.lever.co/fullstacklabs/7c9f6644-045e-41f3-8718-34c8522d87ee | FullStack Labs | Node.js Developer - Remote - Colombia
+- [ ] https://weworkremotely.com/remote-jobs/clouddevs-node-js-backend-engineer | CloudDevs | Node.js Backend Engineer
+- [ ] https://weworkremotely.com/remote-jobs/popcorn-labs-inc-backend-engineer-node-js | Popcorn Labs | Backend Engineer (Node.js)
+- [ ] https://weworkremotely.com/remote-jobs/remotemore-senior-javascript-backend-engineer-node-js-typescript | RemoteMore | Senior JavaScript Backend Engineer (Node.js + TypeScript)
+- [ ] https://weworkremotely.com/remote-jobs/outside-digital-backend-developer-node-js | OUTSIDE DIGITAL | Backend Developer (Node.js)
+- [ ] https://weworkremotely.com/remote-jobs/proxify-ab-senior-backend-developer-node-js-nest-js | Proxify | Senior Backend Developer (Node.js / Nest.js)
+- [ ] https://remotive.com/remote/jobs/software-development/senior-node-js-backend-developer-4246843 | Jobgether | Senior Node.js Backend Developer
+- [ ] https://remotive.com/remote/jobs/software-development/senior-node-js-developer-4346697 | Flosum | Senior Node.js Developer
+- [ ] https://remotive.com/remote/jobs/software-development/senior-back-end-developer-4354196 | Hyper Solutions | Senior Back-End Developer
+- [ ] https://remotive.com/remote/jobs/software-development/senior-back-end-node-js-developer-3968866 | TechMagic | Senior Back-end (Node.js) Developer
+- [ ] https://remotive.com/remote/jobs/software-development/senior-backend-developer-in-node-js-and-nestjs-4197118 | AMcom | Senior Backend Developer (Node.js + NestJS)
+- [ ] https://himalayas.app/companies/jobgether/jobs/senior-backend-engineer-node-js-remote-latam | Jobgether | Senior Backend Engineer (Node.js) - LATAM
+- [ ] https://himalayas.app/companies/jobgether/jobs/senior-fullstack-nodejs-typescript-engineer-latam | Jobgether | Senior Fullstack (NodeJS-TypeScript) Engineer (Latam)
+- [ ] https://himalayas.app/companies/powdevs/jobs/senior-backend-node-js-engineer-latam | Powdevs | Senior Backend Node.js Engineer (LATAM)
+- [ ] https://himalayas.app/companies/g2i/jobs/senior-node-js-engineer-latam | G2i | Senior Node.js Engineer (LatAm)
+- [ ] https://himalayas.app/companies/wizdaa/jobs/backend-principal-software-engineer-node-nestjs-latam | Wizdaa | Backend Principal Software Engineer (Node / NestJS) LATAM
+- [ ] https://himalayas.app/companies/jalasoft/jobs/senior-backend-developer-node-js-nestjs-aws-react-as-a-plus | Jalasoft | Senior Backend Developer (Node.js, NestJS, AWS)
+- [ ] https://himalayas.app/companies/truelogic-io/jobs/senior-back-end-engineer-node-js-typescript-software-development-4620045620 | Truelogic | Senior Back-end Engineer (Node.js/TypeScript)
+- [ ] https://himalayas.app/companies/modak/jobs/software-engineer-backend | Modak | Software Engineer (Backend)
+- [ ] https://www.computrabajo.com.co/eficol-sas/empleos/oferta-de-trabajo-de-ingeniero-desarrollador-nodejs-senior-backend-en-bogota-dc-D70198F7E48C5FA861373E686DCF3405 | Eficol | Ingeniero Desarrollador NodeJs Senior - Backend
+- [ ] https://www.elempleo.com/co/ofertas-empleo/bogota/trabajo-desarrollador-backend-senior-nodejs-nestjs-strapi-v5 | elempleo | Desarrollador Backend Senior NodeJS NestJS Strapi v5
+- [ ] https://www.elempleo.com/co/ofertas-empleo/bogota/trabajo-desarrolladores-backend-senior-hibrido-bogota-modalidad-hibrido | elempleo | Desarrolladores Backend Senior Hibrido Bogota
+- [ ] https://www.elempleo.com/co/ofertas-empleo/bogota/trabajo-developer-backend-modalidad-remoto | elempleo | Developer Backend - Remoto Bogota
+- [ ] https://co.linkedin.com/jobs/view/senior-backend-node-js-engineer-remote-colombia-at-kake-4396164724 | Kake | Senior Backend (Node.JS) Engineer - Remote - Colombia
+- [ ] https://co.linkedin.com/jobs/view/full-stack-engineer-javascript-at-godaddy-3843080753 | GoDaddy | Full Stack Engineer - Javascript (Colombia)
+- [ ] https://www.linkedin.com/jobs/view/java-backend-developer-6026178-at-accenture-4326272981 | Accenture | Java Backend Developer - Colombia
+- [ ] https://www.linkedin.com/jobs/view/backend-developer-engineer-remote-at-joblet-ai-4392075329 | Joblet-AI | Backend Developer / Engineer (Remote)
+- [ ] https://www.linkedin.com/jobs/view/senior-software-engineer-node-js-typescript-react-nestjs-at-copeland-4293119238 | Copeland | Senior Software Engineer (Node.js / TypeScript / React / NestJS)
+
+## Procesadas

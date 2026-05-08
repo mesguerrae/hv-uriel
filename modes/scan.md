@@ -64,6 +64,8 @@ Los `search_queries` con `site:` filters cubren portales de forma transversal (t
 
 Los niveles son aditivos — se ejecutan todos, los resultados se mezclan y deduplicar.
 
+**IMPORTANTE — LinkedIn y calidad vs cantidad:** LinkedIn (Nivel 3) produce muchas ofertas caducadas porque Google indexa URLs que la empresa ya cerró. Es obligatorio verificar liveness con Playwright en el paso 7.5 antes de añadir cualquier URL de LinkedIn al pipeline, y ante la duda, descartar. Mejor 3 ofertas activas que 20 cerradas.
+
 ## Workflow
 
 1. **Leer configuración**: `portals.yml`
@@ -112,23 +114,33 @@ Los niveles son aditivos — se ejecutan todos, los resultados se mezclan y dedu
    - `applications.md` → empresa + rol normalizado ya evaluado
    - `pipeline.md` → URL exacta ya en pendientes o procesadas
 
-7.5. **Verificar liveness de resultados de WebSearch (Nivel 3)** — ANTES de añadir a pipeline:
+7.5. **Verificar liveness de resultados de WebSearch (Nivel 3) — OBLIGATORIO y FAIL-CLOSED** — ANTES de añadir a pipeline:
 
-   Los resultados de WebSearch pueden estar desactualizados (Google cachea resultados durante semanas o meses). Para evitar evaluar ofertas expiradas, verificar con Playwright cada URL nueva que provenga del Nivel 3. Los Niveles 1 y 2 son inherentemente en tiempo real y no requieren esta verificación.
+   Los resultados de WebSearch pueden estar desactualizados (Google cachea resultados durante semanas o meses). **LinkedIn es el peor offender:** sus ofertas quedan indexadas en Google mucho después de cerrarse, y la página pública redirige a login o a búsqueda genérica. Por eso esta verificación es **OBLIGATORIA, NO OPCIONAL**, para TODA URL que provenga del Nivel 3 (WebSearch), y **especialmente para cualquier URL de `linkedin.com`**.
+
+   Regla de oro: **fail-closed**. Si no puedes confirmar con certeza que la oferta está activa, DESCÁRTALA. Es mejor perder una oferta real que llenar el pipeline con basura cerrada.
 
    Para cada URL nueva de Nivel 3 (secuencial — NUNCA Playwright en paralelo):
    a. `browser_navigate` a la URL
    b. `browser_snapshot` para leer el contenido
    c. Clasificar:
-      - **Activa**: título del puesto visible + descripción del rol + control visible de Apply/Submit/Solicitar dentro del contenido principal. No contar texto genérico de header/navbar/footer.
+      - **Activa**: título del puesto visible + descripción del rol + control visible de Apply/Submit/Solicitar/Postular/Bewerben dentro del contenido principal. No contar texto genérico de header/navbar/footer.
       - **Expirada** (cualquiera de estas señales):
         - URL final contiene `?error=true` (Greenhouse redirige así cuando la oferta está cerrada)
-        - Página contiene: "job no longer available" / "no longer open" / "position has been filled" / "this job has expired" / "page not found"
+        - **LinkedIn específico**: URL final redirige a `/jobs/search/`, `/authwall`, `/login`, o la página muestra solo la lista de búsqueda en lugar del detalle de la oferta
+        - **LinkedIn específico**: la página muestra "No longer accepting applications" / "Ya no se aceptan candidaturas" / "Esta oferta ya no está disponible"
+        - **Posting antiguo**: la página muestra "Posted N months ago" / "Hace N meses" con N >= 2 — descartar como stale
+        - Página contiene: "job no longer available" / "no longer open" / "position has been filled" / "this job has expired" / "oferta cerrada" / "vacante cerrada" / "proceso cerrado" / "page not found"
         - Solo navbar y footer visibles, sin contenido JD (contenido < ~300 chars)
-   d. Si expirada: registrar en `scan-history.tsv` con status `skipped_expired` y descartar
+      - **Incierta** (contenido presente pero sin botón Apply visible): **TRATAR COMO EXPIRADA**. No añadir al pipeline.
+   d. Si expirada o incierta: registrar en `scan-history.tsv` con status `skipped_expired` y descartar
    e. Si activa: continuar al paso 8
 
-   **No interrumpir el scan entero si una URL falla.** Si `browser_navigate` da error (timeout, 403, etc.), marcar como `skipped_expired` y continuar con la siguiente.
+   **Atajo: usa `node check-liveness.mjs <url>`** para verificar en batch — ya implementa toda esta lógica vía `liveness-core.mjs` y comparte las mismas reglas.
+
+   **No interrumpir el scan entero si una URL falla.** Si `browser_navigate` da error (timeout, 403, 429, etc.), marcar como `skipped_expired` y continuar con la siguiente.
+
+   **Caso especial LinkedIn:** LinkedIn muestra un authwall a usuarios no logueados para muchas ofertas. Si la página muestra "Sign in to view this job" / "Inicia sesión para ver", tratar como **incierta → expirada**. LinkedIn NO es una fuente fiable para verificar liveness sin sesión; mejor descartar dudas.
 
 8. **Para cada oferta nueva verificada que pase filtros**:
    a. Añadir a `pipeline.md` sección "Pendientes": `- [ ] {url} | {company} | {title}`
