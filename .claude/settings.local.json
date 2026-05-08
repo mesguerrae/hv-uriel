@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node generate-pdf.mjs output/cv-uriel-esguerra-generico.html output/cv-uriel-esguerra-generico-2026-04-18.pdf --format=letter)",
+      "WebSearch",
+      "WebFetch(domain:boards-api.greenhouse.io)",
+      "WebFetch(domain:api.lever.co)",
+      "Bash(node *)"
+    ]
+  }
+}

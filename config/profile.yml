@@ -1,0 +1,66 @@
+# Career-Ops Profile Configuration — Uriel Esguerra Elianegua
+
+candidate:
+  full_name: "Uriel Esguerra Elianegua"
+  email: "urielesguerrae@gmail.com"
+  phone: "+57 311 218 5321"
+  location: "Bogotá, Colombia"
+  linkedin: "linkedin.com/in/urielesguerra-elianegua"
+  portfolio_url: ""
+  github: ""
+  twitter: ""
+
+target_roles:
+  primary:
+    - "Senior Backend Developer"
+    - "Node.js Engineer"
+  archetypes:
+    - name: "Backend Developer (Node.js/NestJS)"
+      level: "Senior"
+      fit: "primary"
+    - name: "Backend Developer (Java/Node.js)"
+      level: "Senior"
+      fit: "primary"
+    - name: "Software Engineer Backend"
+      level: "Mid-Senior"
+      fit: "secondary"
+    - name: "Tech Lead Backend"
+      level: "Senior"
+      fit: "adjacent"
+
+narrative:
+  headline: "Ingeniero Backend con 7+ años en microservicios para eCommerce y banca"
+  exit_story: "He liderado migraciones de monolitos a microservicios en sectores financiero y eCommerce. Busco roles donde pueda combinar profundidad técnica con entendimiento del negocio."
+  superpowers:
+    - "Análisis técnico riguroso antes de desarrollar — entiende el problema antes de escribir código"
+    - "Puente entre negocio y tecnología — traduce requerimientos de negocio a soluciones técnicas"
+    - "Adaptabilidad al cambio — se mueve entre stacks y contextos sin fricción"
+    - "Aprendizaje constante — se mantiene actualizado y adopta nuevas herramientas rápidamente"
+  proof_points:
+    - name: "Migración a Microservicios (eCommerce)"
+      url: ""
+      hero_metric: "Reducción de ~40% en tiempo de entrega de features"
+    - name: "Optimización de APIs bancarias"
+      url: ""
+      hero_metric: "Mejora de latencia superior al 30% con Redis + PostgreSQL"
+    - name: "Integración de sistemas legados"
+      url: ""
+      hero_metric: "Capa de adaptadores Java EE ↔ Node.js sin downtime"
+
+compensation:
+  target_range: "5M-10M COP/mes"
+  currency: "COP"
+  minimum: "5M COP/mes"
+  location_flexibility: "Remoto, híbrido o presencial — preferencia Bogotá"
+
+location:
+  country: "Colombia"
+  city: "Bogotá"
+  timezone: "COT (UTC-5)"
+  visa_status: "N/A — búsqueda local"
+  onsite_availability: "Disponible presencial en Bogotá"
+
+language:
+  cv_language: "es"
+  modes_dir: "modes/"
+  english_level: "Básico"

@@ -1,0 +1,233 @@
+# Portal Scanner Configuration
+# Used by /career-ops scan to discover new offers automatically.
+#
+# Strategy (3 levels):
+#   1. Playwright → careers_url of each company (real-time, reliable)
+#   2. Greenhouse API → structured JSON (fast, Greenhouse-only)
+#   3. WebSearch with site: filters (broad discovery, may be stale)
+#
+# IMPORTANT: Each company in tracked_companies MUST have careers_url.
+#
+# HOW TO CUSTOMIZE:
+#   1. Copy this file to portals.yml in the project root
+#   2. Edit title_filter.positive with YOUR target role keywords
+#   3. Add/remove companies in tracked_companies
+#   4. Adjust search_queries for your preferred job boards
+#   5. Set enabled: false on companies you don't care about
+
+# -- Title filter --
+# The scanner uses these keywords to decide if a title is relevant.
+# At least 1 positive must match AND 0 negatives must match (case-insensitive).
+
+title_filter:
+  positive:
+    # -- Backend / Node.js roles --
+    - "Backend"
+    - "Back-end"
+    - "Back End"
+    - "Node.js"
+    - "Node"
+    - "NestJS"
+    - "TypeScript"
+    - "Software Engineer"
+    - "Software Developer"
+    - "Desarrollador"
+    - "Ingeniero de Software"
+    - "Microservicios"
+    - "Microservices"
+    - "API"
+    - "Full Stack"
+    - "Fullstack"
+    # -- Tech Lead --
+    - "Tech Lead"
+    - "Team Lead"
+    - "Líder Técnico"
+  negative:
+    # [CUSTOMIZE] Add keywords for roles you want to exclude
+    - "Junior"
+    - "Intern"
+    - ".NET"
+    - "iOS"
+    - "Android"
+    - "PHP"
+    - "Ruby"
+    - "Embedded"
+    - "Firmware"
+    - "FPGA"
+    - "ASIC"
+    - "Blockchain"
+    - "Web3"
+    - "Crypto"
+    - "Salesforce Admin"
+    - "SAP "
+    - "Oracle EBS"
+    - "Mainframe"
+    - "COBOL"
+  seniority_boost:
+    # These prefixes add relevance but are not required
+    - "Senior"
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Head"
+    - "Director"
+
+# -- Search queries --
+# Each query triggers a WebSearch. Use site: to filter by portal.
+# The scanner extracts title, URL, and company from results.
+
+search_queries:
+  # -- Colombia / LATAM -- Portales principales --
+
+  - name: LinkedIn — Backend Senior Colombia
+    query: 'site:linkedin.com/jobs ("Senior Backend" OR "Backend Developer" OR "Node.js" OR "NestJS" OR "TypeScript") (Colombia OR Bogota OR remoto)'
+    enabled: true
+
+  - name: LinkedIn — Tech Lead / Full Stack Colombia
+    query: 'site:linkedin.com/jobs ("Tech Lead" OR "Team Lead" OR "Full Stack" OR "Fullstack") (Node OR TypeScript OR backend) (Colombia OR Bogota OR remoto)'
+    enabled: true
+
+  - name: LinkedIn — Microservicios / API Colombia
+    query: 'site:linkedin.com/jobs ("microservicios" OR "microservices" OR "API Developer") backend (Colombia OR Bogota OR remoto)'
+    enabled: true
+
+  - name: Computrabajo — Backend Senior
+    query: 'site:computrabajo.com.co "backend" OR "Node.js" OR "desarrollador" senior Bogota'
+    enabled: true
+
+  - name: Computrabajo — Microservicios
+    query: 'site:computrabajo.com.co "microservicios" OR "NestJS" OR "TypeScript" Bogota OR remoto'
+    enabled: true
+
+  - name: elempleo — Backend Node
+    query: 'site:elempleo.com "backend" OR "Node.js" OR "NestJS" senior Bogota'
+    enabled: true
+
+  - name: elempleo — Desarrollador Senior
+    query: 'site:elempleo.com "desarrollador senior" OR "ingeniero de software" backend Bogota OR remoto'
+    enabled: true
+
+  - name: Torre.co — Backend Colombia
+    query: 'site:torre.co "backend" OR "Node.js" OR "NestJS" Colombia OR remoto'
+    enabled: true
+
+  # -- LATAM Remote --
+
+  - name: GetonBoard — Backend LATAM
+    query: 'site:getonbrd.com "backend" OR "Node.js" OR "NestJS" OR "TypeScript" remoto OR Colombia'
+    enabled: true
+
+  - name: GetonBoard — Senior Dev
+    query: 'site:getonbrd.com "senior developer" OR "senior engineer" backend remoto'
+    enabled: true
+
+  - name: Greenhouse — Backend LATAM
+    query: 'site:job-boards.greenhouse.io "Backend" OR "Node.js" OR "Software Engineer" Colombia OR LATAM OR "Latin America" remote'
+    enabled: true
+
+  - name: Ashby — Backend LATAM
+    query: 'site:jobs.ashbyhq.com "Backend" OR "Node.js" OR "Software Engineer" Colombia OR LATAM OR remote'
+    enabled: true
+
+  - name: Lever — Backend LATAM
+    query: 'site:jobs.lever.co "Backend" OR "Node.js" OR "Software Engineer" LATAM OR Colombia OR remote'
+    enabled: true
+
+  # -- Remote-friendly international (LATAM ok) --
+
+  - name: WeWorkRemotely — Backend
+    query: 'site:weworkremotely.com "Backend" OR "Node.js" OR "Software Engineer" remote'
+    enabled: true
+
+  - name: RemoteOK — Backend Node
+    query: 'site:remoteok.com "backend" OR "node.js" OR "nestjs" remote'
+    enabled: true
+
+  - name: Remotive — Backend
+    query: 'site:remotive.com "Backend Developer" OR "Node.js" OR "Software Engineer" remote'
+    enabled: true
+
+  - name: Himalayas — Backend LATAM
+    query: 'site:himalayas.app "Backend" OR "Node.js" OR "Software Engineer" LATAM OR Colombia OR remote'
+    enabled: true
+
+# -- Tracked companies --
+# Companies whose career pages are checked directly.
+# scan_method: playwright (default), websearch, greenhouse_api
+# For Greenhouse companies, add api: field for faster structured JSON access.
+
+tracked_companies:
+
+  # -- Colombia / LATAM tech companies --
+
+  - name: Globant
+    careers_url: https://jobs.lever.co/globant
+    notes: "Argentina/Colombia/LATAM. Digital transformation. Offices in Bogota."
+    enabled: true
+
+  - name: MercadoLibre
+    careers_url: https://jobs.lever.co/mercadolibre
+    notes: "LATAM eCommerce leader. Backend heavy. Buenos Aires + LATAM remoto."
+    enabled: true
+
+  - name: Rappi
+    careers_url: https://job-boards.greenhouse.io/rappi
+    api: https://boards-api.greenhouse.io/v1/boards/rappi/jobs
+    notes: "Bogota Colombia. Super-app LATAM. Node.js + microservicios."
+    enabled: true
+
+  - name: Nubank
+    careers_url: https://job-boards.greenhouse.io/nuaborgin
+    api: https://boards-api.greenhouse.io/v1/boards/nuaborgin/jobs
+    notes: "Brasil / Colombia / Mexico. Fintech LATAM. Microservicios."
+    enabled: true
+
+  # -- International companies hiring LATAM --
+
+  - name: Endava
+    careers_url: https://jobs.smartrecruiters.com/Endava1
+    scan_method: websearch
+    scan_query: ‘site:endava.com/careers "Backend" OR "Node.js" OR "Software Engineer" Colombia OR LATAM’
+    notes: "UK + LATAM offices. Software consultancy. Bogota office."
+    enabled: true
+
+  - name: EPAM
+    careers_url: https://www.epam.com/careers
+    scan_method: websearch
+    scan_query: ‘site:epam.com/careers "Backend" OR "Node.js" Colombia OR LATAM’
+    notes: "Global tech consultancy. LATAM hiring."
+    enabled: true
+
+  - name: Thoughtworks
+    careers_url: https://www.thoughtworks.com/careers/jobs
+    scan_method: websearch
+    scan_query: ‘site:thoughtworks.com/careers "Backend" OR "Developer" OR "Engineer" Colombia OR LATAM’
+    notes: "Global consultancy. Strong in Colombia."
+    enabled: true
+
+  - name: SumUp
+    careers_url: https://job-boards.greenhouse.io/sumup
+    api: https://boards-api.greenhouse.io/v1/boards/sumup/jobs
+    notes: "Berlin / London. Payments fintech, EU + LATAM hiring."
+    enabled: true
+
+  # -- Remote-first companies (LATAM friendly) --
+
+  - name: Vercel
+    careers_url: https://job-boards.greenhouse.io/vercel
+    api: https://boards-api.greenhouse.io/v1/boards/vercel/jobs
+    notes: "Remote-first. Next.js / Node.js ecosystem."
+    enabled: true
+
+  - name: Supabase
+    careers_url: https://jobs.ashbyhq.com/supabase
+    scan_method: websearch
+    scan_query: ‘site:jobs.ashbyhq.com/supabase’
+    notes: "Remote-first. Postgres + Node.js backend."
+    enabled: true
+
+  - name: PlanetScale
+    careers_url: https://job-boards.greenhouse.io/planetscale
+    api: https://boards-api.greenhouse.io/v1/boards/planetscale/jobs
+    notes: "Serverless MySQL platform. Remote."
+    enabled: true
