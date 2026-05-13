@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -342,3 +343,7 @@ Write one TSV file per evaluation to `batch/tracker-additions/{num}-{company-slu
 - No markdown bold (`**`) in status field
 - No dates in status field (use the date column)
 - No extra text (use the notes column)
+=======
+@AGENTS.md
+<!-- Add anything Claude Code specific that other agents don't need -->
+>>>>>>> d692647c253a0bf92a4f9f3b8043afe2c8161853

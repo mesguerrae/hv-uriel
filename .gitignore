@@ -1,10 +1,34 @@
 # Personal data (user fills these)
+<<<<<<< HEAD
+=======
+cv.md
+data/applications.md
+data/pipeline.md
+data/scan-history.tsv
+reports/*.md
+!reports/.gitkeep
+output/*
+!output/.gitkeep
+batch/logs/*
+!batch/logs/.gitkeep
+batch/batch-state.tsv
+batch/batch-input.tsv
+batch/tracker-additions/**/*.tsv
+!batch/tracker-additions/.gitkeep
+>>>>>>> d692647c253a0bf92a4f9f3b8043afe2c8161853
 jds/*
 !jds/.gitkeep
+
+# Writing samples (user's personal files — never committed)
+writing-samples/*
+!writing-samples/README.md
 
 # User config and customization (never auto-updated)
 .update-dismissed
 .update-lock
+
+# Secrets (never commit — use .env.example as template)
+.env
 
 # Generated
 node_modules/
@@ -16,4 +40,11 @@ bun.lock
 *.mp4
 
 # Claude Code local
+<<<<<<< HEAD
 package-lock.json
+=======
+.claude/settings.local.json
+.claude/memory/
+career-dashboard
+package-lock.json
+>>>>>>> d692647c253a0bf92a4f9f3b8043afe2c8161853

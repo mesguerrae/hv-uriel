@@ -54,4 +54,23 @@
 - [ ] https://remotive.com/remote/jobs/software-development/back-end-developer-4310126 | CoVet | Back-end Developer
 - [ ] https://remotive.com/remote/jobs/software-development/back-end-developer-3814245 | Dev Partners | Back End Developer
 
+- [ ] https://job-boards.greenhouse.io/planetscale/jobs/4009938009 | PlanetScale | Software Engineer - Information Security
+- [ ] https://sumup.com/careers/positions/7475989002?gh_jid=7475989002 | SumUp | Backend Engineer (Global Bank Tribe)
+- [ ] https://sumup.com/careers/positions/8482959002?gh_jid=8482959002 | SumUp | Fullstack Engineer (NodeJs) 
+- [ ] https://sumup.com/careers/positions/8535553002?gh_jid=8535553002 | SumUp | Sales Development Team Lead - French Speaker
+- [ ] https://sumup.com/careers/positions/8534266002?gh_jid=8534266002 | SumUp | SDR Team Lead - Dutch Speaker
+- [ ] https://sumup.com/careers/positions/8508079002?gh_jid=8508079002 | SumUp | Senior Backend Engineer
+- [ ] https://sumup.com/careers/positions/8418287002?gh_jid=8418287002 | SumUp | Senior Backend Engineer - Accounts 
+- [ ] https://sumup.com/careers/positions/8321240002?gh_jid=8321240002 | SumUp | Senior Backend Engineer - Fiscalization
+- [ ] https://sumup.com/careers/positions/8518889002?gh_jid=8518889002 | SumUp | Senior Backend Engineer - Global Expansion
+- [ ] https://sumup.com/careers/positions/8396347002?gh_jid=8396347002 | SumUp | Senior Backend Engineer - Golang
+- [ ] https://sumup.com/careers/positions/8537166002?gh_jid=8537166002 | SumUp | Senior Fullstack Engineer (NodeJs) 
+- [ ] https://sumup.com/careers/positions/8520784002?gh_jid=8520784002 | SumUp | (Senior/Mid) Software Engineer, Golang - Payments Platform
+- [ ] https://sumup.com/careers/positions/8545005002?gh_jid=8545005002 | SumUp | Software Engineer (Golang) - Online Payments
+- [ ] https://job-boards.greenhouse.io/vercel/jobs/5704320004 | Vercel | Software Engineer, Agent
+- [ ] https://job-boards.greenhouse.io/vercel/jobs/5993753004 | Vercel | Software Engineer, Next.js
+- [ ] https://jobs.ashbyhq.com/supabase/b97630c4-0c42-4523-8226-9697d00aa12e | Supabase | CLI Team Lead
+- [ ] https://jobs.ashbyhq.com/supabase/bf3628f2-f6e8-414e-a3fd-2f5ff481b60c | Supabase | AWS Tech Lead - Platform Operations
+- [ ] https://jobs.ashbyhq.com/supabase/b7206c22-979f-444a-809b-e70d9ee23c7f | Supabase | Software Engineer: IaC Platform Experience
+
 ## Procesadas

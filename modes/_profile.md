@@ -64,3 +64,7 @@ Enmarcar perfil como **"Backend engineer que entiende el negocio"**:
 - Roles 100% en inglés sin soporte en español: score de ubicación/idioma **2.0**
 - Roles en Bogotá o remoto LATAM en español: score **5.0**
 - Roles remotos internacionales que requieran inglés fluido: score **1.5**
+
+## Preferencias de Scan
+
+**LinkedIn Colombia:** Cuando el usuario ejecute `/career-ops scan`, siempre ejecutar también las WebSearch queries de LinkedIn Colombia (además de `node scan.mjs`). Las queries están en `portals.yml` bajo `search_queries`. Verificar liveness con Playwright antes de añadir al pipeline; si no hay Playwright disponible, añadir con nota `unconfirmed`.
